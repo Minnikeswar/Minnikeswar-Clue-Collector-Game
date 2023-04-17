@@ -13,7 +13,7 @@ app.secret_key=os.urandom(24)
 def welcome_page():
     if('user_id' in session):
         return redirect('/homepage')
-    return render_template('welcome.html')
+    return render_template('Welcome.html')
 
 @app.route('/signup/')
 def signup_page(message = None):
@@ -24,8 +24,8 @@ def signup_page(message = None):
 @app.route('/login/')
 def login_page(message = None):
     if(message != None):
-        return render_template('login.html' , message = message)
-    return render_template('login.html', message = 'Welcome Back')
+        return render_template('Login.html' , message = message)
+    return render_template('Login.html', message = 'Welcome Back')
 
 @app.route('/homepage')
 def homepage():
