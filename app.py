@@ -1,18 +1,13 @@
 from flask import Flask, redirect , render_template , request,session
 import os
-import mysql.connector 
+import psycopg2
+
+conn = psycopg2.connect("postgres://myproject_2tw6_user:oNqjcN8Xa9ZwZtQMw2CstKuA29ntwJWq@dpg-cgubp482qv2fdecof7q0-a.singapore-postgres.render.com/myproject_2tw6")
+cursor = conn.cursor()
 
 app = Flask(__name__)
 
 app.secret_key=os.urandom(24)
-
-user_name = "sql12613129"
-server = "sql12.freemysqlhosting.net"
-pass_word = "XE8M4KfL7K"
-
-conn =  mysql.connector.connect(host = server, user =user_name, password = pass_word , database = user_name )
-
-cursor = conn.cursor()
 
 @app.route('/')
 def welcome_page():
@@ -37,7 +32,7 @@ def homepage():
     if('username' not in session):
         return redirect('/')
     session['curr_page'] = 0
-    cursor.execute("""select * from `users` where `username` like '{}'""".format(session['username']))
+    cursor.execute("""select * from users where username like '{}'""".format(session['username']))
     a = cursor.fetchall()
     rating = 0
     if(a[0][-1] != 0):
@@ -51,10 +46,10 @@ def first_page():
     if(session['curr_page'] != 0 and session['curr_page'] != 1):
         return redirect(f"/clue-{session['curr_page']}")
     session['curr_page'] = 1
-    cursor.execute("""select * from `users` where `username` = '{}'""".format(session['username']))
+    cursor.execute("""select * from users where username = '{}'""".format(session['username']))
     a = cursor.fetchall()
     print(a)
-    cursor.execute("""update `users` set `rounds_played` = '{}' where `username` = '{}'""".format(a[0][-1] + 1 , session['username']))
+    cursor.execute("""update users set round_played = '{}' where username = '{}'""".format(a[0][-1] + 1 , session['username']))
     conn.commit()
     return render_template('killer.html')
 
@@ -115,10 +110,10 @@ def final_page():
 
 @app.route('/exit')
 def exit():
-    cursor.execute("""select * from `users` where `username` like '{}'""".format(session['username']))
+    cursor.execute("""select * from users where username like '{}'""".format(session['username']))
     a = cursor.fetchall()
     totalScore = session['user_score'] + int(a[0][-1])
-    cursor.execute("""update `users` set `totalscore` = '{}' where `username` like '{}'""".format(totalScore,session['username']))
+    cursor.execute("""update users set totalscore = '{}' where username like '{}'""".format(totalScore,session['username']))
     conn.commit()
     session.pop('username')
     session.pop('email')
@@ -131,9 +126,9 @@ def validate():
     username = request.form.get('username-email')
     password = request.form.get('password')
     if(username.find('@') != -1 and username.find('.com') != -1):
-        cursor.execute("""select * from `users` where `email_id` like '{}' and `password` like '{}'""".format(username,password))
+        cursor.execute("""select * from users where email_id like '{}' and password like '{}'""".format(username,password))
     else:
-        cursor.execute("""select * from `users` where `username` like '{}' and `password` like '{}'""".format(username,password))
+        cursor.execute("""select * from users where username like '{}' and password like '{}'""".format(username,password))
     userlog = cursor.fetchall()
     if(len(userlog) < 1):
         return login_page('Invalid credentials')
@@ -153,13 +148,13 @@ def register():
     if(re_password != password):
         return signup_page('Password mismatch')
     else:
-        cursor.execute("""select * from `users` where `username` like '{}'""".format(username))
+        cursor.execute("""select * from users where username like '{}'""".format(username))
         if(len(cursor.fetchall()) > 0):
             return signup_page('Username already exists')
-        cursor.execute("""select * from `users` where `email_id` like '{}'""".format(email))
+        cursor.execute("""select * from users where email_id like '{}'""".format(email))
         if(len(cursor.fetchall()) > 0):
             return signup_page('Email already exists')
-        cursor.execute("""insert into `users` values('{}','{}','{}','{}','{}')""".format(username,email,password,0,0))
+        cursor.execute("""insert into users values('{}','{}','{}','{}','{}')""".format(username,email,password,0,0))
         conn.commit()
         return signup_page('SUCESSFULLY REGISTERED!!!')
         
