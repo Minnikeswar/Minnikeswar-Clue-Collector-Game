@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/base.css" />
+    <link rel="stylesheet" href="../static/css/sudoku.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../static/js/sudoku.js" defer></script>
+    <script src="../static/js/base.js" defer></script>
+    <title>Clue - 4</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="temp-div">
+        <img src="../static/images/logo-1.png" alt="logo-1" />
+      </div>
+      <div class="title-div">
+        <h1>Clue Collector</h1>
+      </div>
+      <div class="logo-div">
+        <img src="../static/images/logo.png" alt="logo" />
+      </div>
+    </header>
+    <nav class="navbar sudoku">
+      <div>
+        <button class="button-82-pushable" role="button" id="home-button">
+          <span class="button-82-shadow"></span>
+          <span class="button-82-edge"></span>
+          <span class="button-82-front text"> Home </span>
+        </button>
+      </div>
+    </nav>
+    <main class="sudoku-main">
+      <div class="instructions-div">
+        <section class="instructions">
+          <h2>Solve the Sudoku</h2>
+          <p>
+            To play the game, first choose a digit from the bottom row of the
+            board. Once you have selected a digit, click on the empty block in
+            the grid where you would like to place it. If the selection is
+            correct, the digit will be placed in the block. If the selection is
+            incorrect, the error count will
+            increase.
+            <br>
+            <br>
+            Keep in mind that each digit can only appear once in each row,
+            column, and block of nine squares. So, as you progress through the
+            game, be sure to check that your selections are valid and don't
+            violate any of these rules.
+          </p>
+        </section>
+        <div class="hint">
+            <button id="hint-button" class="button-73" role="button">Hint <span id="hint-count">3</span>/3</button>
+        </div>
+      </div>
+      <div class="board-div">
+        <div class="error-div">
+          <h3>Errors :</h3>
+          <h3 id="error-count" class="error-count">0</h3>
+        </div>
+        <div id="board" class="board"></div>
+        <div id="digits" class="digits"></div>
+      </div>
+    </main>
+  </body>
+</html>

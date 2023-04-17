@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/base.css" />
+    <link rel="stylesheet" href="../static/css/homepage.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="temp-div">
+        <img src="../static/images/logo-1.png" alt="logo-1" />
+      </div>
+      <div class="title-div">
+        <h1>Clue Collector</h1>
+      </div>
+      <div class="logo-div">
+        <img src="../static/images/logo.png" alt="logo" />
+      </div>
+    </header>
+    <nav class="navbar">
+      <div>
+        <button class="button-82-pushable" role="button" id="start-game-button" onclick="window.location.href='/clue-1';">
+          <span class="button-82-shadow"></span>
+          <span class="button-82-edge"></span>
+          <span class="button-82-front text"> New Game </span>
+        </button>
+      </div>
+      <div>
+        <button class="button-82-pushable" role="button" id="logout-button" onclick="window.location.href='/exit';">
+          <span class="button-82-shadow"></span>
+          <span class="button-82-edge"></span>
+          <span class="button-82-front text"> Logout </span>
+        </button>
+      </div>
+    </nav>
+    <main class="homepage-main">
+        <div class="user-data">
+            <div class="head-line">
+                User Statistics
+            </div>
+            <div class="stats">
+                <span>Username : <span id="username"> {{ username }} </span></span>
+                <span>Email : <span id="email"> {{ email }} </span></span>
+                <span>No of games played : <span id="game-count"> {{ games }} </span></span>
+                <span>Rating : <span id="rating-count"> {{ rating }} </span></span>
+            </div>
+        </div>
+    </main>
+  </body>
+</html>

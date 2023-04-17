@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/base.css" />
+    <link rel="stylesheet" href="../static/css/treasure.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../static/js/treasure.js" defer></script>
+    <script src="../static/js/base.js" defer></script>
+    <title>Clue - 5</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="temp-div">
+        <img src="../static/images/logo-1.png" alt="logo-1" />
+      </div>
+      <div class="title-div">
+        <h1>Clue Collector</h1>
+      </div>
+      <div class="logo-div">
+        <img src="../static/images/logo.png" alt="logo" />
+      </div>
+    </header>
+    <nav class="navbar sudoku">
+      <div>
+        <button class="button-82-pushable" role="button" id="home-button">
+          <span class="button-82-shadow"></span>
+          <span class="button-82-edge"></span>
+          <span class="button-82-front text"> Home </span>
+        </button>
+      </div>
+    </nav>
+    <main class="treasure-main">
+        <div class="clue-div">
+            <h2>Each of the below corresponds to a clue on each stage : </h2>
+            <h3 class="clue-1">1. No of Persons in the shop ?</h3>
+            <h3 class="clue-2">2. No of distinct cards ?</h3>
+            <h3 class="clue-3">3. Probability of getting cactus and mole in the same pipe ?</h3>
+            <h3 class="clue-4">4. No of initially filled blocks ?</h3>
+            <div class="ans">
+              <input type="text" id="ans-1"></input>
+              <input type="text" id="ans-2"></input>
+              <input type="text" id="ans-3"></input>
+              <input type="text" id="ans-4"></input>
+            </div>
+          <button id="treasure-btn" class="button-78"  role="button">Open Treasure</button>
+        </div>
+        <div class="treasure-div">
+            <div id="treasure-img" class="treasure-img"> </div>
+        </div>
+    </main>
+  </body>
+</html>

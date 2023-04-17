@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/Login.css" />
+    <link rel="stylesheet" href="../static/css/base.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="temp-div">
+        <img src="../static/images/logo-1.png" alt="logo-1" />
+      </div>
+      <div class="title-div">
+        <h1>Clue Collector</h1>
+      </div>
+      <div class="logo-div">
+        <img src="../static/images/logo.png" alt="logo" />
+      </div>
+    </header>
+    <nav class="navbar">
+      <div>
+        <button class="button-82-pushable" role="button" onclick="window.location.href='/signup';">
+          <span class="button-82-shadow"></span>
+          <span class="button-82-edge"></span>
+          <span class="button-82-front text"> Sign Up </span>
+        </button>
+      </div>
+      <div>
+        <button class="button-82-pushable" role="button"  onclick="window.location.href='/login';">
+          <span class="button-82-shadow"></span>
+          <span class="button-82-edge"></span>
+          <span class="button-82-front text"> Login </span>
+        </button>
+      </div>
+    </nav>
+    <main class="login-main">
+      <div class="quote-div">
+        <section class="quote-section">
+          <img class="login-side" src="../static/images/login-side.png" alt="image">
+        </section>
+      </div>
+      <div class="login-div">
+        <section class="login-section">
+          <div class="error-div">
+            
+          </div>
+          <form method="post" class="login-form" action="/login-validation">
+            <h3>Welcome Back !!!</h3>
+            <input
+              type="text"
+              name="username-email"
+              id="username-email"
+              required
+              placeholder="Username / Email"
+            /><br>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              required
+              placeholder="Password"
+            /><br>
+            <button class="button-82-pushable" role="button" type="submit" >
+              <span class="button-82-shadow"></span>
+              <span class="button-82-edge1"></span>
+              <span class="button-82-front1 text"> Login </span>
+            </button>
+          </form>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

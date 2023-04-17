@@ -1,0 +1,102 @@
+.mole-main{
+    padding: 20px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.grid-div{
+    margin: 30px auto;
+    border: 2px solid white;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 550px;
+    height: 550px;
+    background-image: url(../images/soil.png);
+}
+.block{
+    height: 180px;
+    width: 180px;
+    background-image: url(../images/pipe.png);
+    background-size: cover;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.mole{
+    background-image: url(../images/monty-mole.png);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+.cactus{
+    background-image: url(../images/piranha-plant.png);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+.text-div{
+    margin-left: 30px;
+    color: azure;
+    font-size: 22px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 4px solid white;
+    border-radius: 14px;
+    width: 45vw;
+}
+.score-div{
+    /* font-size: 25px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width : 1300px){
+    .mole-main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .text-div{
+        width: 75vw;
+    }
+}
+
+@media (max-width : 600px){
+    .text-div{
+        font-size: 20px;
+        margin-left: 0px;
+    }
+    .block{
+        height: 145px;
+        width: 145px;
+    }
+    .grid-div{
+        height: 460px;
+        width: 460px;
+    }
+    .mole , .cactus{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width : 500px){
+    .text-div{
+        font-size: 18px;
+    }
+    .block{
+        height: 118px;
+        width: 118px;
+    }
+    .grid-div{
+        height: 360px;
+        width: 360px;
+    }
+    .mole , .cactus{
+        width: 70px;
+        height: 70px;
+    }
+}

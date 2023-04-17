@@ -1,0 +1,41 @@
+main{
+    color: white;
+    font-size: 21px;
+    padding: 50px;
+}
+.user-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    border-radius: 8px ;
+    padding: 45px;
+    min-width: 360px;
+}
+.stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 14px;
+}
+.stats span{
+    margin: 15px auto;
+}
+
+.head-line{
+    font-size: 30px;
+    text-decoration: underline
+}
+
+@media (max-width:550px){
+    main{
+        font-size: 18px;
+    }
+    .user-data{
+        padding: 20;
+    }
+    .stats {
+        text-align: start;
+    }
+}

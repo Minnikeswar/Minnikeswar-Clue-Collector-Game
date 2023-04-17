@@ -1,0 +1,79 @@
+.login-div{
+  width: auto;
+  padding: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-section{
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  width: 450px;
+  height: 450px;
+  border: 4px solid #E5E7E9;
+  border-radius: 14px;
+  align-items: center;
+}
+.login-form input , .login-form button{
+  font-size: larger;
+  font-weight: bolder;
+  width: 100%;
+  max-width: 267px;
+  margin: 7% auto;
+  padding: 5px;
+}
+.login-form h3 {
+  text-align: center;
+  font-size: 180%;
+  color:#E5E7E9;
+  font-family: 'Chivo Mono', monospace;
+}
+.login-form input{
+  height: 50px;
+  border: 2px solid #243b55;
+  border-radius: 8px;
+}
+@media (max-width: 1550px) {
+  .login-side{
+    width: 50em;
+  }
+}
+@media (max-width: 1450px) {
+  .login-side{
+    width: 40em;
+  }
+}
+@media (max-width: 1250px) {
+  .login-side{
+    width: 30em;
+  }
+}
+@media (max-width: 1000px) {
+  .login-side{
+    display: none;
+  }
+  .login-main{
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .login-section{
+    height: 350px;
+    width: 350px;
+    padding: 1px;
+  }
+  .login-form input , .login-form button{
+    font-size: small;
+    font-weight: bolder;
+    width: 100%;
+    margin: 3% auto;
+    padding: 5px;
+  }
+}

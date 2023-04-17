@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/base.css" />
+    <link rel="stylesheet" href="../static/css/Signup.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Page</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="temp-div">
+        <img src="../static/images/logo-1.png" alt="logo-1" />
+      </div>
+      <div class="title-div">
+        <h1>Clue Collector</h1>
+      </div>
+      <div class="logo-div">
+        <img src="../static/images/logo.png" alt="logo" />
+      </div>
+    </header>
+    <nav class="navbar">
+      <div>
+        <button class="button-82-pushable" role="button" onclick="window.location.href='/signup';">
+          <span class="button-82-shadow"></span>
+          <span class="button-82-edge"></span>
+          <span class="button-82-front text"> Sign Up </span>
+        </button>
+      </div>
+      <div>
+        <button class="button-82-pushable" role="button" onclick="window.location.href='/login';">
+          <span class="button-82-shadow"></span>
+          <span class="button-82-edge"></span>
+          <span class="button-82-front text"> Login </span>
+        </button>
+      </div>
+    </nav>
+    <main class="signup-main">
+      <div class="banner-div">
+          <img class="signup-side1" src="../static/images/welcome-banner.png" alt="image" />
+      </div>
+      <div class="signup-div">
+        <section class="signup-section">
+          <div class="alert-message" role="alert">
+            {{ message }}
+          </div>
+          <form action="/signup-validation" class="signup-form" method="post">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              required
+              placeholder="Username"
+            />
+            <br />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="Email ID"
+            />
+            <br />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter Password"
+              required
+            />
+            <br />
+            <input
+              type="password"
+              name="re-password"
+              id="re-password"
+              placeholder="Confirm Password"
+              required
+            />
+            /><br />
+            <button class="button-82-pushable" role="button" type="submit">
+              <span class="button-82-shadow"></span>
+              <span class="button-82-edge1"></span>
+              <span class="button-82-front1 text"> Signup </span>
+            </button>
+          </form>
+        </section>
+        <section class="quote-section2">
+          <img class="signup-side2" src="../static/images/signup-banner.png" alt="image" />
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

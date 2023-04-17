@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/base.css" />
+    <link rel="stylesheet" href="../static/css/mole.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../static/js/mole.js" defer></script>
+    <script src="../static/js/base.js" defer></script>
+    <title>Clue - 3</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="temp-div">
+        <img src="../static/images/logo-1.png" alt="logo-1" />
+      </div>
+      <div class="title-div">
+        <h1>Clue Collector</h1>
+      </div>
+      <div class="logo-div">
+        <img src="../static/images/logo.png" alt="logo" />
+      </div>
+    </header>
+    <nav class="navbar sudoku">
+      <div>
+        <button class="button-82-pushable" role="button" id="home-button">
+          <span class="button-82-shadow"></span>
+          <span class="button-82-edge"></span>
+          <span class="button-82-front text"> Home </span>
+        </button>
+      </div>
+    </nav>
+    <main class="mole-main">
+      <div class="text-div">
+        <div class="score-div">
+          Score :&nbsp;
+          <h3 id="score" class="score">0</h3>
+        </div>
+        <div class="instructions-div">
+          In this game, you'll see moles and cacti popping up in random
+          locations on the screen. Your objective is to click on the moles and
+          avoid the cacti.
+          <br>
+          <br>
+          To play the game,
+          simply click on the moles as soon as you see them appear on the
+          screen. Remember to avoid the cacti! Your score will be displayed at
+          the top of the screen, and will increase by 5 points every time you
+          click on a mole, or decrease by 5 points if you accidentally click on
+          a cactus. 
+          <br> <br> The game will continue until you reach a score of 75!
+        </div>
+      </div>
+      <div id="grid-div" class="grid-div"></div>
+    </main>
+  </body>
+</html>

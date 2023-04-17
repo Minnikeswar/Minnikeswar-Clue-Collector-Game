@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/base.css" />
+    <link rel="stylesheet" href="../static/css/memory.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clue - 2</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="temp-div">
+        <img src="../static/images/logo-1.png" alt="logo-1" />
+      </div>
+      <div class="title-div">
+        <h1>Clue Collector</h1>
+      </div>
+      <div class="logo-div">
+        <img src="../static/images/logo.png" alt="logo" />
+      </div>
+    </header>
+    <nav class="navbar sudoku">
+      <div>
+        <button class="button-82-pushable" role="button" id="home-button">
+          <span class="button-82-shadow"></span>
+          <span class="button-82-edge"></span>
+          <span class="button-82-front text"> Home </span>
+        </button>
+      </div>
+    </nav>
+    <main class="memory-main">
+      <div class="text-div">
+        <div class="error-div">
+            <h3>Errors :</h3>
+            <h3 id="error-count">&nbsp; 0</h3>
+        </div>
+        <div class="instruction-div">
+          Welcome to the Memory Game! This is a fun and challenging game that
+          tests your memory skills. In this game, you will be presented with a
+          3X4 grid of cards, with each card containing a hidden image. <br><br> 
+          Your task
+          is to reveal two cards at a time and match the images on them. You
+          will be scored based on the number of attempts it takes you to match
+          all the cards correctly. This game is a great way to improve your memory and
+          concentration skills, so let's get started!
+        </div>
+      </div>
+      <div id="grid-div" class="grid-div">
+        <div id="1" class="block pizza hidden"></div>
+        <div id="2" class="block milkshake hidden"></div>
+        <div id="11" class="block pizza hidden"></div>
+        <div id="3" class="block fries hidden"></div>
+        <div id="21" class="block milkshake hidden"></div>
+        <div id="31" class="block fries hidden"></div>
+        <div id="4" class="block burger hidden"></div>
+        <div id="5" class="block ice hidden"></div>
+        <div id="6" class="block hotdog hidden"></div>
+        <div id="51" class="block ice hidden"></div>
+        <div id="61" class="block hotdog hidden"></div>
+        <div id="41" class="block burger hidden"></div>
+      </div>
+    </main>
+    <script src="../static/js/memory.js" defer></script>
+    <script src="../static/js/base.js" defer></script>
+  </body>
+</html>
