@@ -5,21 +5,6 @@ Welcome to Clue collector game
 Server used : Python (Flask Framework)
 Database used : Postgres (remote)
 
-**Database Credentials**
-
-Hostname  : dpg-cgubp482qv2fdecof7q0-a
-
-Port : 5432
-
-Database : myproject_2tw6
-
-Username : myproject_2tw6_user
-
-password : oNqjcN8Xa9ZwZtQMw2CstKuA29ntwJWq
-
-External Database URL : postgres://myproject_2tw6_user:oNqjcN8Xa9ZwZtQMw2CstKuA29ntwJWq@dpg-cgubp482qv2fdecof7q0-a.singapore-postgres.render.com/myproject_2tw6
-
-
 **Soft Skills Assesed : **
 
 Attention to detail - The memory game, mole and cactus game, and Sudoku game all require a high level of attention to detail to complete successfully. Players must carefully examine the game board and remember patterns and clues in order to progress.
